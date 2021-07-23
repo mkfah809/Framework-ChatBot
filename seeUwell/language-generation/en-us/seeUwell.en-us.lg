@@ -1,0 +1,15 @@
+[import](common.lg)
+
+# SendActivity_RJZpgl_text()
+- ```Hi!
+Welcome to seeUwell!
+Always smile with confidence!
+
+
+Your smile is one of the most important confidence features you show.
+```
+
+# SendActivity_RJZpgl()
+[Activity
+    Text = ${SendActivity_RJZpgl_text()}
+]

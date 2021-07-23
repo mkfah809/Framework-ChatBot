@@ -1,0 +1,20 @@
+[import](common.lg)
+
+# SendActivity_1tGbK4()
+[Activity
+    Text = Checking in Patient Form
+]
+
+# ChoiceInput_Prompt_6IaUb6()
+[Activity
+    Text = Do you want to go back to the MainMenu?
+]
+
+# SendActivity_BdNxM3_text()
+- ```Thanks for using seeUwell. 
+
+Your Smile is our priority :)```
+# SendActivity_BdNxM3()
+[Activity
+    Text = ${SendActivity_BdNxM3_text()}
+]

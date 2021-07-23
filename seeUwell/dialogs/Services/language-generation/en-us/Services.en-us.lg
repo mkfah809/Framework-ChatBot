@@ -1,0 +1,23 @@
+[import](common.lg)
+
+# SendActivity_FNCZKk()
+[Activity
+    Text = ${SendActivity_FNCZKk_text()}
+]
+
+# SendActivity_FNCZKk_text()
+- ```Checking in services
+```
+# ChoiceInput_Prompt_AbdJjI()
+[Activity
+    Text = Do you want to go back to the MainMenu?
+]
+
+# SendActivity_qplClD_text()
+- ```Thanks for using seeUwell. 
+
+Your Smile is our priority :)```
+# SendActivity_qplClD()
+[Activity
+    Text = ${SendActivity_qplClD_text()}
+]

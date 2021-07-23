@@ -1,0 +1,199 @@
+[import](common.lg)
+
+# TextInput_Prompt_pZ8bsC()
+[Activity
+    Text = What is your First Name?
+]
+
+# ConfirmInput_Prompt_o4LHjZ()
+[Activity
+    Text = Is " ${user.FN} " your First Name?
+]
+
+# SendActivity_lqQAqt()
+[Activity
+    Text = I have your name set as " ${user.FN} "
+]
+
+# TextInput_Prompt_0IziCJ()
+[Activity
+    Text = What is your Last Name?
+]
+
+# ConfirmInput_Prompt_GKCU41()
+[Activity
+    Text = Is " ${user.LN} " your last name?
+]
+
+# SendActivity_HHqxBy()
+[Activity
+    Text = I have your name set as " ${user.LN} "
+]
+
+# TextInput_Prompt_6sM74B()
+[Activity
+    Text = What is your first name?
+]
+
+# ConfirmInput_Prompt_i3dI1t()
+[Activity
+    Text = Is " ${user.FN} " your first name?
+]
+
+# SendActivity_MxhSqd()
+[Activity
+    Text = I have set your first name as " ${user.FN} "
+]
+
+# TextInput_Prompt_B98wG4()
+[Activity
+    Text = What is your last name?
+]
+
+# ConfirmInput_Prompt_ZTjiYk()
+[Activity
+    Text = Is " ${user.LN} " your last name?
+]
+
+# SendActivity_LMOo71()
+[Activity
+    Text = I have set your last name as " ${user.LN} "
+]
+
+# SendActivity_O7JwBN()
+[Activity
+    Text = Your full name is " ${user.LN}, ${user.FN} "
+]
+
+# TextInput_Prompt_Cosljo()
+[Activity
+    Text = What is your email?
+]
+
+# ConfirmInput_Prompt_jEpNmC()
+[Activity
+    Text = ${ConfirmInput_Prompt_jEpNmC_text()}
+]
+
+# SendActivity_ZUNV37()
+[Activity
+    Text = ${SendActivity_ZUNV37_text()}
+]
+
+# SendActivity_ZUNV37_text()
+- ```I have your email as
+${user.email}```
+# SendActivity_7kMxfG()
+[Activity
+    Text = Please try again
+]
+
+# ConfirmInput_Prompt_jEpNmC_text()
+- ```Is this your email
+${user.email} ?```
+# ConfirmInput_Prompt_j0i23Y()
+[Activity
+    Text = Is " ${user.PN} " your phone number?
+]
+
+# SendActivity_eFvTnc()
+[Activity
+    Text = I have set your phone number as " ${user.PN} "
+]
+
+# TextInput_Prompt_uyA8OI()
+[Activity
+    Text = Describe reason for appointment 
+]
+
+# TextInput_UnrecognizedPrompt_Cosljo()
+[Activity
+    Text = I don't understand, please enter your email.
+]
+
+# SendActivity_UOrbMC()
+[Activity
+    Text = ${SendActivity_UOrbMC_text()}
+]
+
+# SendActivity_UOrbMC_text()
+- ```Thanks, we will contact you shortly. 
+```
+# ConfirmInput_Prompt_6v32BF_text()
+- ```Is this your Insurance?
+${user.Insurance} .. No problem, you still can apply for CreditCare. 
+
+https://www.carecredit.com/?dtc=MA78&exact=creditcare&sitecode=CCDTCSEMMA78&gclid=Cj0KCQjwxdSHBhCdARIsAG6zhlXdKmVGGM0aEJcZclYpOIEkyJdLL9GKkOtGP_YrbuPXHPduPCVme_EaApSqEALw_wcB&gclsrc=aw.ds```
+# ConfirmInput_Prompt_6v32BF()
+[Activity
+    Text = ${ConfirmInput_Prompt_6v32BF_text()}
+]
+
+# SendActivity_TyDkpR()
+[Activity
+    Text = Your insurance is ${user.Insurance}
+]
+
+# NumberInput_Prompt_6mE3gv()
+[Activity
+    Text = What is your best phone number we can reach you at?
+]
+
+# NumberInput_UnrecognizedPrompt_6mE3gv()
+[Activity
+    Text = ${NumberInput_UnrecognizedPrompt_6mE3gv_text()}
+]
+
+# NumberInput_UnrecognizedPrompt_6mE3gv_text()
+- ```Please enter a valid phone number!
+```
+
+# ChoiceInput_Prompt_KQVIeF()
+[Activity
+    Text = please enter your insurance!
+]
+
+# TextInput_Prompt_Yg4zEC()
+[Activity
+    Text = Please enter your insurance!
+]
+
+# ConfirmInput_Prompt_HKuZYm()
+[Activity
+    Text = Is this your Insurance " ${user.OtherInsurance} "?
+]
+
+# SendActivity_HtPRwr()
+[Activity
+    Text = I have your Insurance as ${user.InsuranceCard}
+]
+
+# SendActivity_lmoD6J()
+[Activity
+    Text = I have your Insurance as ${user.InsuranceCard}
+]
+
+# SendActivity_xwiOLf()
+[Activity
+    Text = I have your Insurance as ${user.InsuranceCard}
+]
+
+# SendActivity_wDBs4J()
+[Activity
+    Text = Thanks! Almost done.
+]
+
+# ChoiceInput_Prompt_Xv20QD()
+[Activity
+    Text = Do you want to go back to the MainMenu?
+]
+
+# SendActivity_9Pqi8j()
+[Activity
+    Text = ${SendActivity_9Pqi8j_text()}
+]
+
+# SendActivity_9Pqi8j_text()
+- ```Thanks for using seeUwell. 
+
+Your Smile is our priority :)```

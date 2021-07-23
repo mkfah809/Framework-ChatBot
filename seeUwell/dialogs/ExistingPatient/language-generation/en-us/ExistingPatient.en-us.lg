@@ -1,0 +1,21 @@
+[import](common.lg)
+
+
+# SendActivity_Kefkka()
+[Activity
+    Text = Checking in Existing patient!
+]
+
+# ChoiceInput_Prompt_XQpTb3()
+[Activity
+    Text = Do you want to go back to the MainMenu?
+]
+
+# SendActivity_I1eeP9_text()
+- ```Thanks for using seeUwell. 
+
+Your Smile is our priority :)```
+# SendActivity_I1eeP9()
+[Activity
+    Text = ${SendActivity_I1eeP9_text()}
+]

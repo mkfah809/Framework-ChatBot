@@ -1,0 +1,30 @@
+[import](common.lg)
+
+# SendActivity_Rj2fXO()
+[Activity
+    Text = ${SendActivity_Rj2fXO_text()}
+]
+
+# SendActivity_Rj2fXO_text()
+- ```Email
+info@seeuwell.com
+
+Telephone Number
++1(888) 486\-2603 
+
+Hours
+Monday to Friday, 09:00 AM ET to 17:00 PM ET.
+```
+# ChoiceInput_Prompt_7vJQ4N()
+[Activity
+    Text = Do you want to go back to the MainMenu?
+]
+
+# SendActivity_U8EcXW_text()
+- ```Thanks for using seeUwell. 
+
+Your Smile is our priority :)```
+# SendActivity_U8EcXW()
+[Activity
+    Text = ${SendActivity_U8EcXW_text()}
+]

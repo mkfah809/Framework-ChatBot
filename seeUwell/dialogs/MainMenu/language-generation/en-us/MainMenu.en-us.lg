@@ -1,0 +1,36 @@
+[import](common.lg)
+
+# ChoiceInput_Prompt_HKqS5J()
+[Activity
+    Text = How can we help you! :) 
+]
+
+# ConfirmInput_Prompt_qJ07Lt()
+[Activity
+    Text = Did you mean ${dialog.MainMenu} ?
+]
+
+# ConfirmInput_Prompt_Z5VhEY()
+[Activity
+    Text = Did you mean ${dialog.MainMenu} ?
+]
+
+# ConfirmInput_Prompt_hBgx0e()
+[Activity
+    Text = Did you mean ${dialog.MainMenu} ?
+]
+
+# ConfirmInput_Prompt_ijIvIG()
+[Activity
+    Text = Did you mean ${dialog.MainMenu} ?
+]
+
+# ConfirmInput_Prompt_4f4Die()
+[Activity
+    Text = Did you mean ${dialog.MainMenu} ?
+]
+
+# ChoiceInput_Prompt_3BuGe0()
+[Activity
+    Text = What is your status?
+]

@@ -1,0 +1,37 @@
+[import](common.lg)
+
+# SendActivity_tMKRSi()
+[Activity
+    Text = ${SendActivity_tMKRSi_text()}
+]
+
+# SendActivity_tMKRSi_text()
+- ```1) xx
+2) xx
+3) xxx```
+# SendActivity_lPI3k5()
+[Activity
+    Text = ${SendActivity_lPI3k5_text()}
+]
+
+# SendActivity_lPI3k5_text()
+- ```xxxxxxx
+```
+# ChoiceInput_Prompt_8cxSeP()
+[Activity
+    Text = Do you want to go back to the MainMenu?
+]
+
+# SendActivity_lnjZMH_text()
+- ```Thanks for using seeUwell. 
+
+Your Smile is our priority :)```
+# SendActivity_lnjZMH()
+[Activity
+    Text = ${SendActivity_lnjZMH_text()}
+]
+
+# ChoiceInput_Prompt_Oz70mw()
+[Activity
+    Text = How can we help you!
+]

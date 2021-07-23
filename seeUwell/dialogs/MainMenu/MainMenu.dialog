@@ -1,0 +1,420 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "gD8Fub",
+    "name": "MainMenu",
+    "description": "seeUwell services."
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "HLXHjP"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "HKqS5J"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOr": " or ",
+            "inlineSeparator": ", ",
+            "inlineOrMore": ", or "
+          },
+          "choices": [
+            "Services",
+            "Hours & Contact",
+            "Patient Form",
+            "Appointment",
+            "Insurance Companies"
+          ],
+          "property": "dialog.MainMenu",
+          "prompt": "${ChoiceInput_Prompt_HKqS5J()}",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          },
+          "style": "heroCard"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "xZdfZH"
+          },
+          "condition": "dialog.MainMenu",
+          "cases": [
+            {
+              "value": "Services",
+              "actions": [
+                {
+                  "$kind": "Microsoft.ConfirmInput",
+                  "$designer": {
+                    "id": "qJ07Lt"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "prompt": "${ConfirmInput_Prompt_qJ07Lt()}",
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "choiceOptions": {
+                    "includeNumbers": true,
+                    "inlineOrMore": ", or ",
+                    "inlineOr": " or ",
+                    "inlineSeparator": ", "
+                  },
+                  "confirmChoices": [
+                    "Yes",
+                    "No"
+                  ],
+                  "property": "dialog.ServiceConfirm"
+                },
+                {
+                  "$kind": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "vFGyY7"
+                  },
+                  "condition": "dialog.ServiceConfirm",
+                  "elseActions": [
+                    {
+                      "$kind": "Microsoft.RepeatDialog",
+                      "$designer": {
+                        "id": "eB5uPQ"
+                      },
+                      "activityProcessed": true,
+                      "allowLoop": true
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.BeginDialog",
+                      "$designer": {
+                        "id": "7pJpa7"
+                      },
+                      "activityProcessed": true,
+                      "dialog": "Services"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": "Hours & Contact",
+              "actions": [
+                {
+                  "$kind": "Microsoft.ConfirmInput",
+                  "$designer": {
+                    "id": "Z5VhEY"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "prompt": "${ConfirmInput_Prompt_Z5VhEY()}",
+                  "choiceOptions": {
+                    "includeNumbers": true,
+                    "inlineOrMore": ", or ",
+                    "inlineOr": " or "
+                  },
+                  "property": "dialog.HnC",
+                  "confirmChoices": [
+                    "Yes",
+                    "No"
+                  ]
+                },
+                {
+                  "$kind": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "RgD1x0"
+                  },
+                  "condition": "dialog.HnC",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.BeginDialog",
+                      "$designer": {
+                        "id": "uT3c0x"
+                      },
+                      "activityProcessed": true,
+                      "dialog": "HoursAndContact"
+                    }
+                  ],
+                  "elseActions": [
+                    {
+                      "$kind": "Microsoft.RepeatDialog",
+                      "$designer": {
+                        "id": "0uExPV"
+                      },
+                      "activityProcessed": true,
+                      "allowLoop": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": "Patient Form",
+              "actions": [
+                {
+                  "$kind": "Microsoft.ConfirmInput",
+                  "$designer": {
+                    "id": "hBgx0e"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "prompt": "${ConfirmInput_Prompt_hBgx0e()}",
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "choiceOptions": {
+                    "includeNumbers": true,
+                    "inlineOrMore": ", or "
+                  },
+                  "property": "dialog.PF",
+                  "confirmChoices": [
+                    "Yes",
+                    "No"
+                  ]
+                },
+                {
+                  "$kind": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "FHho3R"
+                  },
+                  "condition": "dialog.PF",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.BeginDialog",
+                      "$designer": {
+                        "id": "jUo5Lo"
+                      },
+                      "activityProcessed": true,
+                      "dialog": "PatienForm"
+                    }
+                  ],
+                  "elseActions": [
+                    {
+                      "$kind": "Microsoft.RepeatDialog",
+                      "$designer": {
+                        "id": "6HbDSF"
+                      },
+                      "activityProcessed": true,
+                      "allowLoop": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": "Appointment",
+              "actions": [
+                {
+                  "$kind": "Microsoft.ConfirmInput",
+                  "$designer": {
+                    "id": "ijIvIG"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "prompt": "${ConfirmInput_Prompt_ijIvIG()}",
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "choiceOptions": {
+                    "includeNumbers": true,
+                    "inlineOrMore": ", or "
+                  },
+                  "property": "dialog.App",
+                  "confirmChoices": [
+                    "Yes",
+                    "No"
+                  ]
+                },
+                {
+                  "$kind": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "auk33G"
+                  },
+                  "condition": "dialog.App",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.ChoiceInput",
+                      "$designer": {
+                        "id": "3BuGe0"
+                      },
+                      "defaultLocale": "en-us",
+                      "disabled": false,
+                      "maxTurnCount": 3,
+                      "alwaysPrompt": false,
+                      "allowInterruptions": false,
+                      "unrecognizedPrompt": "",
+                      "invalidPrompt": "",
+                      "defaultValueResponse": "",
+                      "prompt": "${ChoiceInput_Prompt_3BuGe0()}",
+                      "choiceOptions": {
+                        "includeNumbers": true
+                      },
+                      "property": "user.IsPatient",
+                      "style": "heroCard",
+                      "choices": [
+                        "An existing user",
+                        "A new user"
+                      ]
+                    },
+                    {
+                      "$kind": "Microsoft.SwitchCondition",
+                      "$designer": {
+                        "id": "ISbbrT"
+                      },
+                      "condition": "user.IsPatient",
+                      "cases": [
+                        {
+                          "value": "An existing user",
+                          "actions": [
+                            {
+                              "$kind": "Microsoft.BeginDialog",
+                              "$designer": {
+                                "id": "lAoJD3"
+                              },
+                              "activityProcessed": true,
+                              "dialog": "ExistingPatient"
+                            }
+                          ]
+                        },
+                        {
+                          "value": "A new user",
+                          "actions": [
+                            {
+                              "$kind": "Microsoft.BeginDialog",
+                              "$designer": {
+                                "id": "qtHtGM"
+                              },
+                              "activityProcessed": true,
+                              "dialog": "Appointment"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "elseActions": [
+                    {
+                      "$kind": "Microsoft.RepeatDialog",
+                      "$designer": {
+                        "id": "yACOPM"
+                      },
+                      "activityProcessed": true,
+                      "allowLoop": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": "Insurance Companies",
+              "actions": [
+                {
+                  "$kind": "Microsoft.ConfirmInput",
+                  "$designer": {
+                    "id": "4f4Die"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "prompt": "${ConfirmInput_Prompt_4f4Die()}",
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "choiceOptions": {
+                    "includeNumbers": true,
+                    "inlineOrMore": ", or ",
+                    "inlineOr": " or ",
+                    "inlineSeparator": ", "
+                  },
+                  "confirmChoices": [
+                    "Yes",
+                    "No"
+                  ],
+                  "property": "dialog.ConInsurance"
+                },
+                {
+                  "$kind": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "A42VuE"
+                  },
+                  "condition": "dialog.ConInsurance",
+                  "elseActions": [
+                    {
+                      "$kind": "Microsoft.RepeatDialog",
+                      "$designer": {
+                        "id": "NIFvEq"
+                      },
+                      "activityProcessed": true,
+                      "allowLoop": true
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.BeginDialog",
+                      "$designer": {
+                        "id": "brvYl4"
+                      },
+                      "activityProcessed": true,
+                      "dialog": "Insurance"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.DeleteProperties",
+          "$designer": {
+            "id": "iaZRad"
+          },
+          "properties": [
+            "dialog.MainMenu",
+            "dialog.Hnc",
+            "dialog.ServiceConfirm",
+            "dialog.PF",
+            "dialog.App",
+            "user.IsPatient",
+            "dialog.ConInsurance"
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "MainMenu.lg",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": []
+  },
+  "id": "MainMenu"
+}
